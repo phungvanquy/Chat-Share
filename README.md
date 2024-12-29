@@ -1,19 +1,24 @@
-## 项目介绍  
+Here is the English translation for the Chinese text in your provided document:
 
-基于LQ的chat2api项目，搭建一个共享站，方便给自己的小伙伴们使用  
-项目地址https://github.com/lanqian528/chat2api
+---
 
-同时支持秦始皇的fuclaude，如果以后有开源的claude镜像会优先适配开源
-## 配置项  
-在docker-compose.yml中配置三个环境变量
+## Project Introduction  
+
+Based on LQ's chat2api project, build a shared platform for easy access by your friends.  
+Project address: [https://github.com/lanqian528/chat2api](https://github.com/lanqian528/chat2api)
+
+It also supports Qin Shi Huang's fuclaude. If an open-source claude image is available in the future, it will be prioritized for adaptation to open source.
+
+## Configuration Items  
+In the `docker-compose.yml`, configure the following three environment variables:
 
 ```
-secret_key最好复杂一点  
-authorization应当和chat2api的环境变量authorization设置的值相同  
-domain_chatgpt是chat2api的站点地址，需要替换成自己的项目地址  
+secret_key should be complex.  
+authorization should match the value of the `authorization` environment variable in chat2api.  
+domain_chatgpt is the site address of chat2api, which needs to be replaced with your own project address.
 ```
 
-### 直接部署
+### Direct Deployment
 
 ```bash
 git clone https://github.com/h88782481/chat-share
@@ -22,9 +27,9 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### Docker 部署
+### Docker Deployment
 
-您需要安装 Docker 和 Docker Compose。
+You need to install Docker and Docker Compose.
 
 ```bash
 docker run -d \
@@ -36,43 +41,47 @@ docker run -d \
   ghcr.io/h88782481/chat-share:latest
 ```
 
-### (推荐) Docker Compose 部署
+### (Recommended) Docker Compose Deployment
 
-创建一个新的目录，例如 chat-share，并进入该目录：
+Create a new directory, such as `chat-share`, and enter the directory:
 
 ```bash
 mkdir chat-share
 cd chat-share
 ```
 
-在此目录中下载库中的 docker-compose.yml 文件：
+Download the `docker-compose.yml` file from the repository into this directory:
 
 ```bash
 wget https://raw.githubusercontent.com/h88782481/Chat-Share/main/docker-compose.yml
 ```
 
-修改 docker-compose-warp.yml 文件中的环境变量，保存后：
+Modify the environment variables in the `docker-compose-warp.yml` file, save, and then run:
 
 ```bash
 docker-compose up -d
 ```
 
-## 页面预览  
+## Page Preview  
 
-### 登录页  
-默认管理员账户
+### Login Page  
+Default admin account:
 ```
-账号：admin
-密码：password
+Username: admin
+Password: password
 ```
-请登录后在用户管理中更改用户名和密码 
+Please log in and change the username and password in the user management section. 
 
 ![image](https://github.com/user-attachments/assets/2541f8d0-eb76-42fb-8ec7-24199fc93372)
 
-### 后台管理页面
+### Backend Management Page
 
 ![image](https://github.com/user-attachments/assets/56ea9c43-6cfc-418c-a461-d4fc35b354eb)
 
 ## License
 
 MIT License
+
+---
+
+Let me know if you need further modifications!
